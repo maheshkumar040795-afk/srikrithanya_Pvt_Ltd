@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Project Gallery — Srikrithanya Private Limited fire fighting, electrical and MEP installation projects across Chennai and Tamil Nadu.">
+<title>Project Gallery | Srikrithanya Private Limited</title>
+<link rel="icon" href="assets/img/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  // Defined early so it's ready before any gallery <img onerror> fires.
+  // Tries several extension/case variants — GitHub Pages is case-sensitive
+  // even though Windows file names are not, so this covers common mismatches.
+  var GALLERY_EXT_VARIANTS = ['jpeg', 'png', 'JPG', 'JPEG', 'PNG'];
+
+  function handleGalleryImgError(img) {
+    var i = img.dataset.tryIndex ? parseInt(img.dataset.tryIndex, 10) : 0;
+    if (i < GALLERY_EXT_VARIANTS.length) {
+      img.dataset.tryIndex = i + 1;
+      img.src = img.dataset.base + '.' + GALLERY_EXT_VARIANTS[i];
+      return;
+    }
+    img.style.display = 'none';
+    var placeholder = img.nextElementSibling;
+    if (placeholder) placeholder.style.display = 'flex';
+  }
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo-block">
+      <div class="logo-chip"><img src="assets/img/logo.png" alt="Srikrithanya Private Limited Logo"></div>
+      <div class="logo-text-wrap">
+        <span class="logo-text">SRIKRITHANYA <span>PVT LTD</span></span>
+        <span class="logo-tag">Engineering Excellence</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-page="index.html">Home</a></li>
+      <li><a href="about.html" data-page="about.html">About</a></li>
+      <li><a href="services.html" data-page="services.html">Services</a></li>
+      <li><a href="gallery.html" data-page="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+      <li><a href="tel:+919344643061" class="nav-cta">Call Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-bg" style="background-image:url('assets/img/warehouse-wide.jpg');"></div>
+  <div class="container">
+    <div class="eyebrow">Our Work</div>
+    <h1>Project Gallery</h1>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+  </div>
+</header>
+
+<!-- COMPLETED PROJECT PHOTOS FROM BROCHURE -->
+<section class="section">
+  <div class="container">
+    <div class="eyebrow" data-aos="fade-up">Featured Installations</div>
+    <h2 class="section-title" data-aos="fade-up">Recent <span>Site Work</span></h2>
+    <p class="section-sub" data-aos="fade-up">A glimpse of fire protection, electrical and pipeline installations completed by our team.</p>
+    <div class="grid-4">
+      <div data-aos="zoom-in"><img src="assets/img/pump-room-wide.jpg" alt="Fire pump room installation" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in" data-aos-delay="60"><img src="assets/img/elec-panels-row.jpg" alt="Electrical panel row" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in" data-aos-delay="120"><img src="assets/img/ceiling-piping-wide.jpg" alt="Ceiling piping installation" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in" data-aos-delay="180"><img src="assets/img/svc-warehouse-racks.jpg" alt="Warehouse racking" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in"><img src="assets/img/pipes-vertical.jpg" alt="Vertical pipeline works" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in" data-aos-delay="60"><img src="assets/img/pipeline-outdoor.jpg" alt="Outdoor pipeline" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in" data-aos-delay="120"><img src="assets/img/elec-cable-tray.jpg" alt="Cable tray installation" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+      <div data-aos="zoom-in" data-aos-delay="180"><img src="assets/img/warehouse-wide.jpg" alt="Warehouse infrastructure" style="border-radius:8px; height:190px; width:100%; object-fit:cover;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING / CLIENT PROJECT SLOTS (AUTO-LOADING CARDS) -->
+<section class="section on-cream-deep">
+  <div class="container">
+    <div class="eyebrow" data-aos="fade-up">More Coming Soon</div>
+    <h2 class="section-title" data-aos="fade-up" style="margin-bottom:40px;">Client Project <span>Gallery</span></h2>
+    <div class="grid-4">
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="0">
+        <img src="assets/img/project-photo-1.jpg" data-base="assets/img/project-photo-1" alt="Project photo 1" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 1</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="60">
+        <img src="assets/img/project-photo-2.jpg" data-base="assets/img/project-photo-2" alt="Project photo 2" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 2</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="120">
+        <img src="assets/img/project-photo-3.jpg" data-base="assets/img/project-photo-3" alt="Project photo 3" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 3</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="180">
+        <img src="assets/img/project-photo-4.jpg" data-base="assets/img/project-photo-4" alt="Project photo 4" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 4</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="0">
+        <img src="assets/img/project-photo-5.jpg" data-base="assets/img/project-photo-5" alt="Project photo 5" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 5</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="60">
+        <img src="assets/img/project-photo-6.jpg" data-base="assets/img/project-photo-6" alt="Project photo 6" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 6</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="120">
+        <img src="assets/img/project-photo-7.jpg" data-base="assets/img/project-photo-7" alt="Project photo 7" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 7</span></div>
+      </div>
+      <div class="gallery-card" data-aos="fade-up" data-aos-delay="180">
+        <img src="assets/img/project-photo-8.jpg" data-base="assets/img/project-photo-8" alt="Project photo 8" onerror="handleGalleryImgError(this)">
+        <div class="gallery-placeholder"><i class="fas fa-image"></i><span>Project Photo 8</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-flex">
+      <div>
+        <h2>Have a Project in Mind?</h2>
+        <p>Let's discuss your fire, electrical or MEP requirement.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-gold"><i class="fas fa-arrow-right"></i> Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="logo-chip"><img src="assets/img/logo.png" alt="Logo"></div>
+          <div>
+            <div class="footer-brand-name">SRIKRITHANYA <span style="color:var(--gold)">PVT LTD</span></div>
+            <div class="footer-brand-tag">Safety. Reliability. Trust.</div>
+          </div>
+        </div>
+        <p>Chennai-based engineering company delivering Fire Protection, Electrical MEP and Industrial Pipeline solutions with ISO 9001:2015 certified processes.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/srikrithanya_pvt_ltd_09" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/919344643061" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="tel:+914431744742" title="Call"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Project Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#fire-fighting">Fire Fighting Systems</a></li>
+          <li><a href="services.html#electrical">Electrical Works</a></li>
+          <li><a href="services.html#mep">Warehouse MEP Services</a></li>
+          <li><a href="services.html#amc">AMC Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone"></i> +91 44 3174 4742</li>
+          <li><i class="fas fa-mobile-alt"></i> 93446 43061 / 88070 03061</li>
+          <li><i class="fas fa-envelope"></i> letsconnectsrikrithanya@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> No.15, Shanthipuram, 4th Street, Indira Gandhi Nagar, Thirumullaivoyal, Chennai – 600062</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 <span>Srikrithanya Private Limited</span>. All rights reserved. | ISO 9001:2015 Certified | MSME Registered
+    </div>
+  </div>
+</footer>
+
+<div class="floating-buttons">
+  <a href="https://wa.me/919344643061?text=Hello%20Srikrithanya%2C%20I%27d%20like%20to%20enquire%20about%20your%20services" class="float-btn whatsapp-btn" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:+919344643061" class="float-btn call-btn" title="Call Now"><i class="fas fa-phone"></i></a>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
